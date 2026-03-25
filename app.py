@@ -4,7 +4,9 @@ import requests
 app = Flask(__name__)
 
 API_KEY = "YOUR_API_KEY"
-
+@app.route("/")
+def home():
+    return "AI Backend is running 🚀"
 @app.route("/chat", methods=["POST"])
 def chat():
     user_message = request.json.get("message")
