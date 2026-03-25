@@ -3,6 +3,7 @@ from flask import Flask, request, jsonify
 import requests
 
 app = Flask(__name__)
+CORS(app)
 
 API_KEY = "YOUR_API_KEY"
 @app.route("/")
